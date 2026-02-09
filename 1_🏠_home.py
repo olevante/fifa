@@ -3,6 +3,7 @@ import webbrowser
 import pandas as pd
 from datetime import datetime
 from openai import OpenAI
+
 client = OpenAI()
 
 if "data" not in st.session_state:
