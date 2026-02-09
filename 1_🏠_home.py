@@ -1,10 +1,11 @@
 import streamlit as st
-import webbrowser
 import pandas as pd
 from datetime import datetime
-from openai import OpenAI
+import openai
+import os
 
-client = OpenAI()
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
 
 if "data" not in st.session_state:
     df_data = pd.read_csv("datasets/CLEAN_FIFA23_official_data.csv", index_col=0)
